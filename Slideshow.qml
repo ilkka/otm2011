@@ -35,19 +35,26 @@ Rectangle {
         slides.x = -(current * width);
     }
 
-    onWidthChanged: { slides.setSlideWidths(); }
-    onHeightChanged: { slides.setSlideWidths(); }
+    onSlidewidthChanged: {
+        console.debug("setSlideWidths() due to width change");
+        slides.setSlideWidths();
+    }
+    onSlideheightChanged: {
+        console.debug("setSlideWidths() due to height change");
+        slides.setSlideWidths();
+    }
 
     Row {
         id: slides
         anchors.verticalCenter: parent.verticalCenter
-        height: parent.height
+        height: parent.slideheight
         width: children.length * parent.width
         spacing: parent.width - parent.slidewidth
         function setSlideWidths() {
+            console.debug("Set all slides to " + parent.slidewidth + "x" + parent.slideheight);
             for (var i=0; i < children.length; ++i) {
-                children[i].width = parent.slidewidth
-                children[i].height = parent.slideheight
+                children[i].width = parent.slidewidth;
+                children[i].height = parent.slideheight;
             }
         }
         Behavior on x {
@@ -59,6 +66,7 @@ Rectangle {
     }
 
     Component.onCompleted: {
-        setSlideWidths();
+        console.debug("setSlideWidths() due to onCompleted");
+        slides.setSlideWidths();
     }
 }
