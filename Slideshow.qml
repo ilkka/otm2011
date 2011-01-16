@@ -19,8 +19,8 @@ Rectangle {
       */
     default property alias children: slides.children
 
-    property int slidewidth: Math.min(width,height) * 0.8
-    property int slideheight: slidewidth
+    property int slidewidth: Math.min(width * 0.8, (4/3) * height * 0.8)
+    property int slideheight: (3/4) * slidewidth
 
     Keys.onRightPressed: {
         current += 1;
@@ -37,10 +37,12 @@ Rectangle {
     onSlidewidthChanged: {
         console.debug("setSlideWidths() due to width change");
         slides.setSlideWidths();
+        slides.showSlide(current);
     }
     onSlideheightChanged: {
         console.debug("setSlideWidths() due to height change");
         slides.setSlideWidths();
+        slides.showSlide(current);
     }
 
     Row {
