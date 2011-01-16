@@ -9,8 +9,6 @@ Slideshow {
     }
     Slide {
         title: "Mikä mies?"
-        Text {
-            text: "Hello again, world"
-        }
+        Bullet { text: "Hello again, world!" }
     }
 }
