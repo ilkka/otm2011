@@ -1,16 +1,10 @@
 import Qt 4.7
 
-Rectangle {
-    width: 360
-    height: 360
+Slideshow {
+    width: 640
+    height: 480
     Text {
         anchors.centerIn: parent
         text: "Hello World"
-    }
-    MouseArea {
-        anchors.fill: parent
-        onClicked: {
-            Qt.quit();
-        }
     }
 }
