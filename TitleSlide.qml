@@ -8,14 +8,17 @@ Slide {
         anchors.fill: parent
         Text {
             id: titleLabel
-            text: ""
-        }
-        Text {
-            id: authorLabel
+            anchors.horizontalCenter: parent.horizontalCenter
             text: ""
         }
         Text {
             id: subtitleLabel
+            anchors.horizontalCenter: parent.horizontalCenter
+            text: ""
+        }
+        Text {
+            id: authorLabel
+            anchors.horizontalCenter: parent.horizontalCenter
             text: ""
         }
     }
