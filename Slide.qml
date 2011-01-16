@@ -16,7 +16,7 @@ Rectangle {
 
     Text {
         id: title
-        text: "Slide title"
+        text: ""
         anchors.top: parent.top
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.margins: parent.margin
