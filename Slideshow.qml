@@ -35,19 +35,23 @@ Rectangle {
         slides.x = -(current * width);
     }
 
+    onWidthChanged: { slides.setSlideWidths(); }
+    onHeightChanged: { slides.setSlideWidths(); }
+
     Row {
         id: slides
         anchors.verticalCenter: parent.verticalCenter
         height: parent.height
         width: children.length * parent.width
-        spacing: width - parent.slidewidth
+        spacing: parent.width - parent.slidewidth
         Component.onCompleted: {
+            setSlideWidths();
+        }
+        function setSlideWidths() {
             for (var i=0; i < children.length; ++i) {
                 children[i].width = parent.slidewidth
                 children[i].height = parent.slideheight
             }
-            console.debug("Children: " + children.length);
-            console.debug("Slides width: " + width);
         }
         Behavior on x {
             NumberAnimation {
