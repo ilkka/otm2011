@@ -9,6 +9,18 @@ import Qt 4.7
 Rectangle {
     width: 640
     height: 480
+
+    gradient: Gradient {
+        GradientStop {
+            position: 0.00;
+            color: "#d5d5d5";
+        }
+        GradientStop {
+            position: 1.00;
+            color: "#ffffff";
+        }
+    }
+
     focus: true
 
     /*! Current slide
