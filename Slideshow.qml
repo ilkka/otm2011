@@ -31,8 +31,7 @@ Rectangle {
     }
 
     onCurrentChanged: {
-        console.debug("Move to slide " + current);
-        slides.x = -(current * width);
+        slides.showSlide(current);
     }
 
     onSlidewidthChanged: {
@@ -57,16 +56,25 @@ Rectangle {
                 children[i].height = parent.slideheight;
             }
         }
+        function showSlide(idx) {
+            console.debug("Move to slide " + current);
+            x = -(current * parent.width) + ((parent.width - parent.slidewidth) / 2);
+        }
         Behavior on x {
-            NumberAnimation {
-                duration: 500
-                easing.type: Easing.InOutCubic
+            SequentialAnimation {
+                NumberAnimation {
+                    duration: 500
+                    easing.type: Easing.InOutCubic
+                }
+                ScriptAction {
+                    script: console.debug("X stopped at " + slides.x);
+                }
             }
         }
-    }
-
-    Component.onCompleted: {
-        console.debug("setSlideWidths() due to onCompleted");
-        slides.setSlideWidths();
+        Component.onCompleted: {
+            console.debug("setSlideWidths() due to onCompleted");
+            setSlideWidths();
+            showSlide(0);
+        }
     }
 }
