@@ -19,8 +19,8 @@ Rectangle {
       */
     default property alias children: slides.children
 
-    property int slidewidth: width * 0.8
-    property int slideheight: height * 0.8
+    property int slidewidth: Math.min(width,height) * 0.8
+    property int slideheight: slidewidth
 
     Keys.onRightPressed: {
         current += 1;
@@ -44,9 +44,6 @@ Rectangle {
         height: parent.height
         width: children.length * parent.width
         spacing: parent.width - parent.slidewidth
-        Component.onCompleted: {
-            setSlideWidths();
-        }
         function setSlideWidths() {
             for (var i=0; i < children.length; ++i) {
                 children[i].width = parent.slidewidth
@@ -59,5 +56,9 @@ Rectangle {
                 easing.type: Easing.InOutCubic
             }
         }
+    }
+
+    Component.onCompleted: {
+        setSlideWidths();
     }
 }
