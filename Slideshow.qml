@@ -14,11 +14,22 @@ Rectangle {
       */
     property int current: 0
 
+    /*! Children go under the slides Row
+      */
+    default property alias children: slides.children
+
     Keys.onRightPressed: {
         current += 1;
     }
 
     Keys.onLeftPressed: {
         current -= 1;
+    }
+
+    Row {
+        id: slides
+        anchors.verticalCenter: parent.verticalCenter
+        height: parent.height
+        width: children.length * parent.width
     }
 }
