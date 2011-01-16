@@ -62,8 +62,8 @@ Rectangle {
             }
         }
         function showSlide(idx) {
-            console.debug("Move to slide " + current);
-            x = -(current * parent.width) + ((parent.width - parent.slidewidth) / 2);
+            console.debug("Move to slide " + idx);
+            x = -(idx * parent.width) + ((parent.width - parent.slidewidth) / 2);
         }
         function relayout() {
             slides.setSlideWidths();
