@@ -3,12 +3,9 @@ import Qt 4.7
 Slideshow {
     width: 640
     height: 480
-    Slide {
+    TitleSlide {
         title: "Scrum kohtaa prototypointiprojektin"
-        Text {
-            anchors.centerIn: parent
-            text: "Hello World"
-        }
+        author: "Ilkka Laukkanen <ilkka.s.laukkanen@gmail.com>"
     }
     Slide {
         title: "Mikä mies?"
