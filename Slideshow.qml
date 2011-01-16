@@ -30,6 +30,11 @@ Rectangle {
         current -= 1;
     }
 
+    onCurrentChanged: {
+        console.debug("Move to slide " + current);
+        slides.x = current * width;
+    }
+
     Row {
         id: slides
         anchors.verticalCenter: parent.verticalCenter
