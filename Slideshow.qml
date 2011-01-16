@@ -32,7 +32,7 @@ Rectangle {
 
     onCurrentChanged: {
         console.debug("Move to slide " + current);
-        slides.x = current * width;
+        slides.x = -(current * width);
     }
 
     Row {
@@ -48,6 +48,12 @@ Rectangle {
             }
             console.debug("Children: " + children.length);
             console.debug("Slides width: " + width);
+        }
+        Behavior on x {
+            NumberAnimation {
+                duration: 500
+                easing.type: Easing.InOutCubic
+            }
         }
     }
 }
