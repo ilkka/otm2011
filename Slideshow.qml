@@ -35,14 +35,17 @@ Rectangle {
     }
 
     onSlidewidthChanged: {
-        console.debug("setSlideWidths() due to width change");
-        slides.setSlideWidths();
-        slides.showSlide(current);
+        slides.relayout();
     }
     onSlideheightChanged: {
-        console.debug("setSlideWidths() due to height change");
-        slides.setSlideWidths();
-        slides.showSlide(current);
+        slides.relayout();
+    }
+
+    onWidthChanged: {
+        slides.relayout();
+    }
+    onHeightChanged: {
+        slides.relayout();
     }
 
     Row {
@@ -62,6 +65,11 @@ Rectangle {
             console.debug("Move to slide " + current);
             x = -(current * parent.width) + ((parent.width - parent.slidewidth) / 2);
         }
+        function relayout() {
+            slides.setSlideWidths();
+            slides.showSlide(parent.current);
+        }
+
         Behavior on x {
             SequentialAnimation {
                 NumberAnimation {
