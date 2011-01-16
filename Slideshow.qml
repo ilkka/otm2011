@@ -9,6 +9,7 @@ import Qt 4.7
 Rectangle {
     width: 640
     height: 480
+    focus: true
 
     /*! Current slide
       */
@@ -17,6 +18,9 @@ Rectangle {
     /*! Children go under the slides Row
       */
     default property alias children: slides.children
+
+    property int slidewidth: width * 0.8
+    property int slideheight: height * 0.8
 
     Keys.onRightPressed: {
         current += 1;
@@ -31,5 +35,14 @@ Rectangle {
         anchors.verticalCenter: parent.verticalCenter
         height: parent.height
         width: children.length * parent.width
+        spacing: width - parent.slidewidth
+        Component.onCompleted: {
+            for (var i=0; i < children.length; ++i) {
+                children[i].width = parent.slidewidth
+                children[i].height = parent.slideheight
+            }
+            console.debug("Children: " + children.length);
+            console.debug("Slides width: " + width);
+        }
     }
 }
