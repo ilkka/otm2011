@@ -20,8 +20,10 @@ Rectangle {
         anchors.top: parent.top
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.margins: parent.margin
+        width: parent.width - 2 * parent.margin
         font.pixelSize: parent.height * 0.08
         font.bold: true
+        wrapMode: Text.WordWrap
     }
 
     Item {
