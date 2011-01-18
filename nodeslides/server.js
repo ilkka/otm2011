@@ -13,9 +13,15 @@ function about_handler(url, res) {
     res.end("Moro");
 }
 
+function random_handler(url, res) {
+    res.writeHead(404, { 'Content-Type': 'text/html' });
+    res.end(jade.render("!!! 5\nhtml(lang='en')\n  body\n    h1 404: " + url.href + " not found.\n"));
+}
+
 var routes = {
-    '/': index_handler,
-    '/about': about_handler
+    "^\\/$": index_handler,
+    "^\\/about\\/?$": about_handler,
+    "^.*$": random_handler
 };
 
 http.createServer(function (req, res) {
@@ -23,9 +29,10 @@ http.createServer(function (req, res) {
                       util.log("Handling " + req_url.href);
                       for (var route in routes) {
                         util.debug("Trying " + route);
-                        if (route == req_url.pathname) {
+                        if (RegExp(route).test(req_url.pathname)) {
                           util.debug("Routing");
                           routes[route](req_url, res);
+                          break;
                         }
                       }
 }).listen(8124, "127.0.0.1");
