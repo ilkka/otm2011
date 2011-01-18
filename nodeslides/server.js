@@ -4,7 +4,6 @@ var url = require('url');
 var util = require('util');
 
 function index_handler(url, res) {
-    util.log("Handling request for " + url.href);
     res.writeHead(200, { 'Content-Type': 'text/html' });
     res.end(jade.render("!!! 5\nhtml(lang='en')\n  body\n    h1 Jade"));
 }
@@ -21,8 +20,11 @@ var routes = {
 
 http.createServer(function (req, res) {
                       req_url = url.parse(req.url, true);
+                      util.log("Handling " + req_url.href);
                       for (var route in routes) {
+                        util.debug("Trying " + route);
                         if (route == req_url.pathname) {
+                          util.debug("Routing");
                           routes[route](req_url, res);
                         }
                       }
