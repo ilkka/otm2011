@@ -3,7 +3,7 @@ var jade = require('jade');
 var url = require('url');
 var util = require('util');
 
-function handle(url, res) {
+function index_handler(url, res) {
     util.log("Handling request for " + url.href);
     res.writeHead(200, { 'Content-Type': 'text/html' });
     res.end(jade.render("!!! 5\nhtml(lang='en')\n  body\n    h1 Jade"));
