@@ -9,6 +9,11 @@ function handle(url, res) {
     res.end(jade.render("!!! 5\nhtml(lang='en')\n  body\n    h1 Jade"));
 }
 
+var routes = {
+    '/': index_handler,
+    '/about': about_handler
+};
+
 http.createServer(function (req, res) {
                       req_url = url.parse(req.url);
                       handle(req_url, res);
