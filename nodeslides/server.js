@@ -9,6 +9,11 @@ function index_handler(url, res) {
     res.end(jade.render("!!! 5\nhtml(lang='en')\n  body\n    h1 Jade"));
 }
 
+function about_handler(url, res) {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end("Moro");
+}
+
 var routes = {
     '/': index_handler,
     '/about': about_handler
