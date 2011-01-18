@@ -15,7 +15,7 @@ var routes = {
 };
 
 http.createServer(function (req, res) {
-                      req_url = url.parse(req.url);
+                      req_url = url.parse(req.url, true);
                       handle(req_url, res);
 }).listen(8124, "127.0.0.1");
 
