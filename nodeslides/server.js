@@ -3,6 +3,7 @@ var jade = require('jade');
 var url = require('url');
 var util = require('util');
 var fs = require('fs');
+var path = require('path');
 
 function index_handler(url, res) {
     res.writeHead(200, { 'Content-Type': 'text/html' });
