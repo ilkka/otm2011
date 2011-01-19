@@ -2,6 +2,7 @@ var http = require('http');
 var jade = require('jade');
 var url = require('url');
 var util = require('util');
+var fs = require('fs');
 
 function index_handler(url, res) {
     res.writeHead(200, { 'Content-Type': 'text/html' });
@@ -13,15 +14,29 @@ function about_handler(url, res) {
     res.end("Moro");
 }
 
-function random_handler(url, res) {
+function err404_handler(url, res) {
     res.writeHead(404, { 'Content-Type': 'text/html' });
     res.end(jade.render("!!! 5\nhtml(lang='en')\n  body\n    h1 404: " + url.href + " not found.\n"));
+}
+
+function jade_page_handler(url, res) {
+    var source = 'content' + url.pathname.replace(/\.[^.]+/, '.jade');
+    util.debug('Looking for ' + source);
+    var stat = fs.statSync(source)
+    if (stat.isFile()) {
+        util.debug("Found it");
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        res.end(jade.renderFile(source, { 'locals': url.query }));
+    } else {
+        util.debug("Calling 404 handler");
+        err404_handler(url, res);
+    }
 }
 
 var routes = {
     "^\\/$": index_handler,
     "^\\/about\\/?$": about_handler,
-    "^.*$": random_handler
+    "^.*$": jade_page_handler
 };
 
 http.createServer(function (req, res) {
