@@ -26,7 +26,9 @@ function jade_page_handler(url, res) {
     if (stat.isFile()) {
         util.debug("Found it");
         res.writeHead(200, { 'Content-Type': 'text/html' });
-        res.end(jade.renderFile(source, { 'locals': url.query }));
+        res.end(jade.renderFile(source, { 'locals': url.query }, function(err, html) {
+                                util.log('Jade error: ' + err);
+                                }));
     } else {
         util.debug("Calling 404 handler");
         err404_handler(url, res);
