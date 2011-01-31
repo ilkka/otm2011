@@ -1,0 +1,21 @@
+LANDSLIDE = `which landslide`.chomp
+raise RuntimeError.new('landslide not in PATH') if LANDSLIDE.empty?
+
+BASENAME = 'otm2010'
+
+desc "Build all different formats"
+task :default => [:html, :pdf]
+
+desc "Build HTML presentation"
+task :html => ["#{BASENAME}.html"]
+
+desc "Build PDF presentation"
+task :pdf => ["#{BASENAME}.pdf"]
+
+file "#{BASENAME}.html" => ["#{BASENAME}.md"] do
+  sh "#{LANDSLIDE} -i -d #{BASENAME}.html #{BASENAME}.md"
+end
+
+file "#{BASENAME}.pdf" => ["#{BASENAME}.md"] do
+  sh "#{LANDSLIDE} -d #{BASENAME}.pdf #{BASENAME}.md"
+end
