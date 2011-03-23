@@ -25,8 +25,13 @@
 * Tarkkuus heikko
 
 !SLIDE incremental transition=slideX center
-# Arvioton aika
+# Arvioton aika #
 
 <img src="bosch.jpg"/>
 
-!
+!SLIDE bullets incremental transition=slideX
+# Planning poker #
+
+* Abstraktit story pointit
+* Kaikki osallistumassa
+* Ei tunnu niin konkreettiselta sitoumukselta
