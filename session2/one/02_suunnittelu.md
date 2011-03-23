@@ -53,3 +53,11 @@
 * Yksitasoiset taskit
 * Simppelimpi... hyvässä ja pahassa
 
+!SLIDE bullets incremental transition=slideX
+# The parhaus #
+
+* "Product backlog" tracissa
+* Splittaus yhdessä
+  * Vaikein osuus
+* Planning poker -arviointi samaan putkeen
+* Sprint backlog post-it -lapuilla tussitaululla
