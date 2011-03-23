@@ -35,6 +35,13 @@
 * Abstraktit story pointit
 * Kaikki osallistumassa
 * Ei tunnu niin konkreettiselta sitoumukselta
+* Ei jää roikkumaan
+
+!SLIDE bullets incremental transition=slideX
+# Sudenkuopat #
+
+* Liian isojen asioiden arviointi
+* Splitin / arvioiden jättäminen ihmisten aktiivisuuden nojaan
 
 !SLIDE bullets incremental transition=slideX
 # Seuranta #
