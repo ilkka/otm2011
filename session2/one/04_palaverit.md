@@ -18,7 +18,7 @@
 * ...mutta tähän alkaa mennä koko päivä
 * Planning pokeria ei koskaan saatu tarpeeksi nopeaksi
 
-!SLIDE woohooface center incremental transition=slideX
+!SLIDE woohooface center transition=slideX
 # Sprint review #
 
 <script>
@@ -30,3 +30,8 @@ $(".woohooface").bind("showoff:show", function(event) {
 
 <img src="ewbte.png"/>
 
+!SLIDE bullets incremental transition=slideX
+# Retrospektiivi #
+
+* Ei käytännössä pidetty
+* Projektin (scrumiin kuulumattomat) viikkopalaverit
