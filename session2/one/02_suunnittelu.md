@@ -35,3 +35,21 @@
 * Abstraktit story pointit
 * Kaikki osallistumassa
 * Ei tunnu niin konkreettiselta sitoumukselta
+
+!SLIDE bullets incremental transition=slideX
+# Seuranta #
+
+* Alussa firman oma Jira
+* Raskas... hyvässä ja pahassa
+* Plugareilla varsin hyvä Scrum-tuki
+* Taskihierarkia hyödyllinen splittaamisessa
+* Konkreettiset yksiköt pakkomielle
+
+!SLIDE bullets incremental transition=slideX
+# Trac #
+
+* Yhtenäistäminen muiden tiimien kanssa
+* Milestonet == sprintit
+* Yksitasoiset taskit
+* Simppelimpi... hyvässä ja pahassa
+
