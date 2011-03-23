@@ -6,7 +6,7 @@
 
 * Ei ennustettavutta
 * Ei tavoitteiden saavuttamisen fiilistä
-* Ei ...
+* Ei kuvaa projektin etenemisestä
 
 !SLIDE bullets incremental transition=slideX
 # Ennustettavuus #
@@ -18,5 +18,15 @@
 !SLIDE bullets incremental transition=slideX
 # Työmääräarviot #
 
+* Alussa tehtävien tekijöiden vastuulla
+* Arviot tunteina
+* ...mutta käytännössä päivinä
+* Kokemusta vähän
+* Tarkkuus heikko
 
+!SLIDE incremental transition=slideX center
+# Arvioton aika
 
+<img src="bosch.jpg"/>
+
+!
