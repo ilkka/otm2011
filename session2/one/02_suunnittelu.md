@@ -58,6 +58,6 @@
 
 * "Product backlog" tracissa
 * Splittaus yhdessä
-  * Vaikein osuus
+* (vaikein osuus)
 * Planning poker -arviointi samaan putkeen
 * Sprint backlog post-it -lapuilla tussitaululla
