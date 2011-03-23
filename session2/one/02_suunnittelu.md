@@ -1,21 +1,21 @@
-!SLIDE 
+!SLIDE subsection transition=slideX
 # Suunnittelu #
 
-!SLIDE  bullets incremental
+!SLIDE  bullets incremental transition=slideX
 # Ongelma: #
 
 * Ei ennustettavutta
 * Ei tavoitteiden saavuttamisen fiilistä
 * Ei ...
 
-!SLIDE bullets incremental
+!SLIDE bullets incremental transition=slideX
 # Ennustettavuus #
 
 * Siis työmääräarviot
 * Ja toteutumien seuranta
-* &rarr; projektiot
+* => projektiot
 
-!SLIDE bullets incremental
+!SLIDE bullets incremental transition=slideX
 # Työmääräarviot #
 
 
