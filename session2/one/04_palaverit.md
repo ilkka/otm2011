@@ -35,3 +35,10 @@ $(".woohooface").bind("showoff:show", function(event) {
 
 * Ei käytännössä pidetty
 * Projektin (scrumiin kuulumattomat) viikkopalaverit
+
+!SLIDE bullets incremental transition=slideX
+# Paras palaverisetti: #
+
+* 2 h tiukka raja reviewillä
+* **nopea** splittaus ja planning poker heti perään
+* Post-it -daily scrumit
