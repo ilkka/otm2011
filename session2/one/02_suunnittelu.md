@@ -68,3 +68,22 @@
 * (vaikein osuus)
 * Planning poker -arviointi samaan putkeen
 * Sprint backlog post-it -lapuilla tussitaululla
+* Sprint burndown toisella tussitaululla
+
+!SLIDE center transition=slideX
+<img src="fyea.png" />
+
+!SLIDE bullets incremental transition=slideX
+# Projektiot #
+
+* Alussa perustui varsinaisiin työtunteihin
+* 37,5 h * allokaatio * hervantakerroin / auringonpilkkujen määrä
+* ...
+* 37,5 h:ssa toki tehdään 37,5 h:n työt?!
+
+!SLIDE bullets incremental transition=slideX
+# Story pointit FTW #
+
+* *Oikeaan dataan* perustuvat arviot
+* Arviot joihin tiimi on päässyt itse vaikuttamaan
+* Tulokset yllättävänkin hyviä
