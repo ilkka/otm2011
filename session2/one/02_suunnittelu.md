@@ -64,8 +64,7 @@
 # The parhaus #
 
 * "Product backlog" tracissa
-* Splittaus yhdessä
-* (vaikein osuus)
+* Splittaus yhdessä (vaikein osuus)
 * Planning poker -arviointi samaan putkeen
 * Sprint backlog post-it -lapuilla tussitaululla
 * Sprint burndown toisella tussitaululla
