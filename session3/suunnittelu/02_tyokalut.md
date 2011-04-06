@@ -60,3 +60,8 @@ style="font-size: 200%; margin-left: 200px; visibility: hidden">Featuret</span>
 
 ![Planning poker](poker.jpg)
 (© Alan Dayley http://flickr.com/alandd)
+
+!SLIDE center
+# Kanban board #
+
+![Kanban board](taskboard.jpg)
