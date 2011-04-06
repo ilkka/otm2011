@@ -2,52 +2,46 @@
 # Työkalut #
 
 <script>
+function piilotane(event) {
+	$(event.target).find(".piilota").hide();
+}
+$(".oneatatime").bind("showoff:show", piilotane);
+$(".oneatatime").bind("showoff:prev", piilotane);
+
 // Tämä skripta näyttää järjestyksessä kolme kuvaa ja tekstiä
 // ja päästää vasta sitten eteenpäin
 $(".oneatatime").bind("showoff:next", function(event) {
 	var pic = $(event.target).find("#ekakuva");
-	if (pic.css("visibility") === "hidden") {
+	if (pic.data('paljastettu') != true) {
 		event.preventDefault();
-		pic.css({visibility: "visible"});
-		var el = $(event.target).find("#ekateksti");
-		el.css({visibility: "visible"});
+		pic.fadeIn('slow');
+		pic.data('paljastettu', true);
 		return;
 	}
 	pic = $(event.target).find("#tokakuva");
-	if (pic.css("visibility") === "hidden") {
+	if (pic.data('paljastettu') != true) {
 		event.preventDefault();
-		pic.css({visibility: "visible"});
-		var el = $(event.target).find("#tokateksti");
-		el.css({visibility: "visible"});
+		pic.fadeIn('slow');
+		pic.data('paljastettu', true);
 		return;
 	}
 	var pic = $(event.target).find("#kolmaskuva");
-	if (pic.css("visibility") === "hidden") {
+	if (pic.data('paljastettu') != true) {
 		event.preventDefault();
-		pic.css({visibility: "visible"});
-		var el = $(event.target).find("#kolmasteksti");
-		el.css({visibility: "visible"});
+		pic.fadeIn('slow');
+		pic.data('paljastettu', true);
 		return;
 	}
 });
 </script>
 
 <div style="width:100%; text-align: center;">
-<img src="folder_documents.png" id="ekakuva"
-style="width:30%; visibility: hidden;"/>
-<img src="folder_documents.png" id="tokakuva"
-style="width:30%; visibility: hidden;"/>
-<img src="binary.png" id="kolmaskuva"
-style="width:30%; visibility: hidden;"/>
-</div>
-
-<div style="width:100%; text-align: center">
-<span id="ekateksti"
-style="font-size: 200%; margin-right: 200px; visibility: hidden">PBIt</span>
-<span id="tokateksti"
-style="font-size: 200%; visibility: hidden">Taskit</span>
-<span id="kolmasteksti"
-style="font-size: 200%; margin-left: 200px; visibility: hidden">Featuret</span>
+<img src="product_backlog.png" id="ekakuva" class="piilota"
+style="width:30%;"/>
+<img src="sprint_backlog.png" id="tokakuva" class="piilota"
+style="width:30%;"/>
+<img src="features.png" id="kolmaskuva" class="piilota"
+style="width:30%;"/>
 </div>
 
 !SLIDE center
