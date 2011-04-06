@@ -35,3 +35,10 @@
 * Aamuisin
 * Muttei liian aikaisin
 * Taululla
+
+!SLIDE bullets incremental
+# Retrospektiivi #
+
+* Parin viikon välein
+* Pari tuntia
+* Projektin viikkopalaverin paikalla
