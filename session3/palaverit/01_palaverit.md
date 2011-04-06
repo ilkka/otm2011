@@ -42,3 +42,10 @@
 * Parin viikon välein
 * Pari tuntia
 * Projektin viikkopalaverin paikalla
+
+!SLIDE bullets incremental
+# Überscrum #
+
+* Kokonaan irrallaan muusta aikataulusta
+* Demonstroidaan edellinen valmis tuotos
+* Keskitytään ideointiin
