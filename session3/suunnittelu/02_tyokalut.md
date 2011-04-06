@@ -54,3 +54,9 @@ style="font-size: 200%; margin-left: 200px; visibility: hidden">Featuret</span>
 # Storyja käsittelevä työkalu #
 
 ![Pivotal](pivotal.png)
+
+!SLIDE center
+# Planning Poker #
+
+![Planning poker](poker.jpg)
+(© Alan Dayley http://flickr.com/alandd)
