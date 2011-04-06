@@ -1,6 +1,10 @@
 {
 	"name": "Scrum-prototyyppiprojektin retrospektiivi",
 	"sections": [ 
-		{"section":"one"}
+		{"section":"avaus"},
+		{"section":"suunnittelu"},
+		{"section":"toteutus"},
+		{"section":"palaverit"},
+		{"section":"lopetus"}
 	]
 }
