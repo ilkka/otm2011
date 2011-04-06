@@ -13,3 +13,9 @@
 
 * Enemmän rauhaa
 * ...mutta samalla enemmän sosiaalisuutta
+
+!SLIDE bullets incremental
+# Suunnittelijat #
+
+* Paremmin sovitut yhteistyötavat
+* Parempi ymmärrys kumpienkin tarpeista
