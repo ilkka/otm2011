@@ -19,3 +19,8 @@
 
 * Paremmin sovitut yhteistyötavat
 * Parempi ymmärrys kumpienkin tarpeista
+
+!SLIDE bullets incremental
+# Organisaation tuki #
+
+* Erillinen scrum master
