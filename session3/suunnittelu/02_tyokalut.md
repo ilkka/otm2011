@@ -60,3 +60,9 @@ style="width:30%;"/>
 
 ![Kanban board](taskboard.jpg)
 (© Drew Stephens, http://flickr.com/dinomite)
+
+!SLIDE center
+# Burndown #
+
+![Burndown](burndown.png)
+
