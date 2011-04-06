@@ -1,3 +1,4 @@
-.content {
-	background: url('http://ilkka.github.com/otm2011/img/slidebg.png');
+.slide {
+	color: white;
+	background: url('http://ilkka.github.com/otm2011/img/slidebg.png') center center;
 }
