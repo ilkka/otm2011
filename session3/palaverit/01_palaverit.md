@@ -26,4 +26,12 @@
 
 * Reviewin jälkeen
 * Kesto pidettävä kurissa
+* Ehkä jako brainstormaukseen ja tiimin plänäykseen
+* Planning poker
 
+!SLIDE bullets incremental
+# Daily scrum #
+
+* Aamuisin
+* Muttei liian aikaisin
+* Taululla
