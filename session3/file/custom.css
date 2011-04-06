@@ -1,0 +1,13 @@
+.slide {
+	color: white;
+	background: url('http://ilkka.github.com/otm2011/img/slidebg.png') center center;
+}
+
+.content::after {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	padding: 0.2em;
+	background: #0f0f0f;
+	content: "http://ilkka.github.com/otm2011"
+}
