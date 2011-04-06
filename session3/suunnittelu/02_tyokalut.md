@@ -65,3 +65,4 @@ style="font-size: 200%; margin-left: 200px; visibility: hidden">Featuret</span>
 # Kanban board #
 
 ![Kanban board](taskboard.jpg)
+(© Drew Stephens, http://flickr.com/dinomite)
